@@ -17,3 +17,9 @@ app_router.include_router(
     tags=['Depression']
 )
 
+app_router.include_router(
+    flight_router,
+    prefix='/flight',
+    tags=['Flight Price Prediction']
+)
+
