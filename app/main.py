@@ -1,8 +1,11 @@
 import logging
 from fastapi import FastAPI
 from .api.v1.router import app_router
+from .api.v2.router import app_router_v2
 from .core import logger
-from fastapi.middleware.cors import CORSMiddleware        
+from fastapi.middleware.cors import CORSMiddleware    
+
+
 # Configure logging is handled by core.logger module
 
 app = FastAPI(
@@ -21,3 +24,4 @@ app.add_middleware(
 
 
 app.include_router(app_router, prefix="/api/v1")
+app.include_router(app_router_v2, prefix="/api/v2")
