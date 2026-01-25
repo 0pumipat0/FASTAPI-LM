@@ -38,12 +38,12 @@ A FastAPI project with machine learning capabilities for serving ML models via R
 Start the development server with auto-reload:
 
 ```bash
-uvicorn main:app --reload
+uvicorn app.main:app --reload
 ```
 
 ### Production Mode
 
-Run with specific host and port:
+Run with / host and port:
 
 ```bash
 python -m uvicorn main:app --host 0.0.0.0 --port 8000
