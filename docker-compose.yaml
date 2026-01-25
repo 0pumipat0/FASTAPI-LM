@@ -1,5 +1,5 @@
 services:
-  api-siwapan:
+  api-pumipat:
     build: .
     ports:
       - "8336:8000"
